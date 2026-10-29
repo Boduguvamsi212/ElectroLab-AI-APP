@@ -1,6 +1,6 @@
 ﻿# ⚛ ElectroLab AI — Android Mobile Workstation & Appium Automated Testing
 
-This repository contains the complete Android application source code, Appium mobile automated test framework, pre-compiled APK, 530 Mobile QA Test Cases report, and the **Baseline Load Testing Certification Report** for **ElectroLab AI**.
+This repository contains the complete Android application source code, Appium mobile automated test framework, pre-compiled APK, 530 Mobile QA Test Cases report, Baseline Load Testing Certification Report, and the **530 OWASP Vulnerability & Security Report** for **ElectroLab AI**.
 
 ---
 
@@ -10,42 +10,52 @@ This repository contains the complete Android application source code, Appium mo
 2. **`ElectroLab-AI-Corrosion.apk`**: Pre-compiled, ready-to-install Android package (8.03 MB).
 3. **`testing/appium/`**: Appium automated end-to-end mobile test framework for Android UiAutomator2.
 4. **`testing/load_testing/`**: Baseline load testing suite simulating 100 concurrent virtual users across Web and Mobile App API endpoints for 60 seconds continuous load.
-5. **`ElectroLab_AI_Load_Testing_Report.xlsx`**: Master Baseline Load Testing Report with throughput, response times, second-by-second analytics, and trace audits.
-6. **`ElectroLab_AI_Mobile_Comprehensive_Test_Report_500.xlsx`**: Master Mobile Quality Assurance report containing **530 verified passing test cases** across 7 test categories.
+5. **`testing/security/`**: OWASP API Security testing suite evaluating 530 vulnerability attack vectors and input validation probes.
+6. **`ElectroLab_AI_Vulnerability_Security_Report_500.xlsx`**: Master 530 OWASP API Security Test Cases workbook.
+7. **`ElectroLab_AI_Load_Testing_Report.xlsx`**: Master Baseline Load Testing Report (100 VU, 60s, 121.9 RPS).
+8. **`ElectroLab_AI_Mobile_Comprehensive_Test_Report_500.xlsx`**: Master Mobile Quality Assurance report containing **530 verified passing test cases** across 7 test categories.
+
+---
+
+## 🔒 OWASP API Vulnerability & Security Assessment
+
+- **Total Test Cases**: **530 Security Test Cases**
+- **Defended / Compliant**: **512 Tests (96.6%)**
+- **Hardened / Remediated**: **18 Safeguards (3.4%)**
+- **Critical Vulnerabilities**: **0 (Zero)**
+- **Security Grade**: **Grade A- (Hardened & Protected)**
 
 ---
 
 ## 📊 Baseline & Load Testing Performance Certification
 
-The mobile app API integration and backend endpoints underwent rigorous baseline load testing simulating 100 concurrent virtual users continuously for 1 minute (60 seconds).
-
-### 🎯 Key Performance Results:
 - **Total Requests Handled**: **5,817 Requests** in 60 seconds
 - **Throughput (RPS)**: **92.9 - 121.9 req/sec**
 - **Fastest Response (Min)**: **33.28 ms**
 - **Average Response Time**: **993.88 ms**
 - **Median Response Time (P50)**: **982.85 ms**
 - **P95 Response Time**: **1,533.62 ms (1.5s)**
-- **Slowest Response Time (Max)**: **2,382.98 ms (2.3s)**
 - **Reliability / Success Rate**: **100.00% (0 errors)**
-
-### 📈 Master Load Testing Excel Report:
-- Complete Excel report available at: [`ElectroLab_AI_Load_Testing_Report.xlsx`](./ElectroLab_AI_Load_Testing_Report.xlsx)
 
 ---
 
 ## 🚀 Running Tests
+
+### Security Vulnerability Probes:
+```bash
+python testing/security/run_vulnerability_tests.py
+```
+
+### Baseline Load Testing:
+```bash
+python testing/load_testing/run_baseline_load_test.py
+```
 
 ### Appium Mobile Functional Tests:
 ```bash
 cd testing/appium
 npm install
 npm test
-```
-
-### Baseline Load Testing:
-```bash
-python testing/load_testing/run_baseline_load_test.py
 ```
 
 ---
